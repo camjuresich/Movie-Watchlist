@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Movies Watchlist</title>
-</head>
-<body>
-    <header>
-        <h1>Find your Film</h1>
-        <a href="#">My Watchlist</a>
-    </header>
-    <script src="app.js" type="module"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <script defer src="https://friconix.com/cdn/friconix.js"></script>
+
+        <title>Movies Watchlist</title>
+    </head>
+    <body>
+        <div class="app">
+            <header class="hero">
+                <h1>Find your Film</h1>
+                <a href="#">My Watchlist</a>
+                <form class="search">
+                    <input
+                        type="text"
+                        placeholder="Search for a movie"
+                        id="search-text"
+                        class="search-text"
+                    />
+                    <input type="submit" class="search-submit" value="Search" />
+                </form>
+                <!-- <i class="fi-xnsuhl-search"></i> -->
+            </header>
+            <section class="search-results">
+                <!-- IF USER HAS NOT SEARCHED -->
+                <img src="images/film.svg" alt="" />
+                <h3>Start Exploring</h3>
+
+                <!-- ICON FOR THE STAR RATING -->
+                <!-- <i class="fi-xxxxxx-star-solid"></i> -->
+
+                <!-- ICON FOR ADDING TO THE WATCHLIST -->
+                <!-- <i class="fi-cwsuxl-plus-solid"></i> -->
+            </section>
+        </div>
+
+        <script src="app.js" type="module"></script>
+    </body>
 </html>
