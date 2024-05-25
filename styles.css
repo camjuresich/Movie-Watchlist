@@ -1,9 +1,7 @@
 /* margin resets */
-html,
-h1,
-a,
-body {
+* {
     margin: 0;
+    padding: 0;
 }
 
 html,
@@ -21,23 +19,32 @@ body {
     height: 100%;
 }
 
+
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: rgb(41, 41, 41);
     color: white;
-    padding: 3em 4.2em;
+    padding: 1em 1.2em 2em;
     position: relative;
-    /* margin-left: 1em; */
-    /* margin-right: 1em; */
+}
+
+.hero h1 {
+    font-size: 1rem;
+}
+
+.hero a {
+    margin: 0;
+    font-size: .8rem;
+    font-weight: bold;
 }
 
 .search {
     display: flex;
     justify-content: center;
     position: absolute;
-    margin-left: auto;
+    margin: 0 1em;
     left: 0;
     right: 0;
     bottom: -1em;
@@ -46,7 +53,7 @@ body {
 
 .search-text {
     width: 70%;
-    max-width: 500px;
+    flex-grow: 1;
     padding: 0.5em 1em 0.5em 3em;
     background-image: url("images/fi-xnsuxl-search.svg");
     background-size: 2em;
@@ -58,10 +65,11 @@ body {
 }
 
 .search-submit {
+    flex-grow: .25;
     color: #374151;
     border: 2px solid #d1d5db;
     background-color: #f9fafb;
-    padding: 0 2em;
+    padding: 0 1em;
     border-radius: 0 7px 7px 0;
 }
 
@@ -69,9 +77,9 @@ body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
+    margin: 2em 0;
 }
 
 .search-results > h3 {
@@ -86,28 +94,120 @@ a {
 }
 
 .movie {
-    display: flex;
-    /* margin: 1em 5em; */
-    max-width: 620px;
-    gap: 2em;
+    gap: .5em;
+    display: grid;
+    grid-template-columns: 5.5em repeat(4, auto) ;
+    grid-template-areas: 
+        "covr titl titl titl ...."
+        "covr runt runt rati ...."
+        "covr genr genr genr ...."
+        "covr watc .... .... ...."
+        "desc desc desc desc desc";
+    justify-content: center;
+    margin: 1em;
+}
+.movie-cover {
+    grid-area: covr;
+    width: 100%;
 }
 
-.cover-art img {
-    width: 150px;
-    border-radius: 5px;
+.movie-title {
+    grid-area: titl;
+    
 }
-
-.title-plus-rating {
-    display: flex;
-    /* justify-content: ; */
-    gap: 1em;
-    align-items: center;
-}
-
 .star {
     color: #FEC654;
 }
-
-.runtime-genre-watchlist {
+.rating {
+    grid-area: rati;
     display: flex;
 }
+.rating p {
+    display: inline-block;
+}
+
+.movie-genres {
+    grid-area: genr;
+}
+.movie-runtime {
+    grid-area: runt;
+}
+
+.add-to-watchlist-btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: watc;
+    padding: 0;
+}
+
+.add-to-watchlist-btn button {
+    border: none;
+    background-color: transparent;
+    margin-top: 3px;
+    
+}
+
+.movie-description {
+    grid-area: desc;
+    white-space: no-wrap;
+}
+
+@media (min-width: 768px) {
+ 
+    .hero {
+        padding: 4em 3em;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero a {
+        font-size: 1.25rem;
+        
+    }
+
+    .search {
+        max-width: 680px;
+        margin: 0 auto;
+    }
+    .search-results {
+        max-width: 768px;
+        align-self: center;
+    }
+    .movie {
+        
+        gap: 1em;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 6em repeat(7, auto) ;
+        grid-template-areas: 
+            
+            "covr . . . . . . ."
+            "covr . titl titl rati .... .... ...."
+            "covr . runt genr genr watc .... ...."
+            "covr . desc desc desc desc desc desc"
+            "covr . desc desc desc desc desc desc"
+            "covr . . . . . . ."
+            ;
+            
+        
+        margin: 3em;
+    }
+
+    .watchlist {
+        padding-right: .5em;
+        margin-bottom: .1em;
+    }
+    .rating i {
+        padding-right: .25em;
+    }
+
+    .rating p {
+        margin-top: .1em;
+    }
+}
+
+
+
+

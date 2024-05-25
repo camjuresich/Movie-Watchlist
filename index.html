@@ -19,46 +19,213 @@
             <header class="hero">
                 <h1>Find your Film</h1>
                 <a href="#">My Watchlist</a>
-                <form class="search">
+                <form class="search" id="form">
                     <input
                         type="text"
                         placeholder="Search for a movie"
                         id="search-text"
                         class="search-text"
+                        name="search-text"
                     />
-                    <input type="submit" class="search-submit" value="Search" />
+                    <button
+                        id="search-submit"
+                        type="submit"
+                        class="search-submit"
+                    >
+                        Search
+                    </button>
                 </form>
                 <!-- <i class="fi-xnsuhl-search"></i> -->
             </header>
-            <section class="search-results">
+            <section class="search-results" id="search-results">
                 <!-- IF USER HAS NOT SEARCHED -->
                 <!-- <img src="images/film.svg" alt="" />
                 <h3>Start Exploring</h3> -->
 
                 <div class="movie">
-                    <div class="cover-art">
-                        <img src="images/bladeRunner.png" alt="" />
+                    <img
+                        class="movie-cover"
+                        src="images/bladeRunner.png"
+                        alt=""
+                    />
+                    <h2 class="movie-title">Blade Runner</h2>
+                    <div class="rating">
+                        <i class="fi-xxxxxm-star-solid star"></i>
+                        <p class="movie-rating">8.1</p>
                     </div>
-                    <div class="movie-details">
-                        <div class="title-plus-rating">
-                            <h2 class="movie-title">Blade Runner</h2>
-                            <i class="fi-xxxxxm-star-solid star"></i>
-                            <p class="movie-rating">
-                                8.1
-                            </p>
-                        </div>
-                        <div class="runtime-genre-watchlist">
-                            <p class="movie-runtime">117 min</p>
-                            <p class="movie-genres">Action, Drama, Sci-fi</p>
-                        <button class="add-to-watchlist-btn">Watchlist</button>
-                            
-                        </div>
-                        <p class="movie-description">
-                            A blade runner must pursue and terminate four
-                            replicants who stole a ship in space, and have
-                            returned to Earth to find their creator.
-                        </p>
+                    <p class="movie-runtime">117 min</p>
+                    <p class="movie-genres">Action, Drama, Sci-fi</p>
+                    <div class="add-to-watchlist-btn">
+                        <i class="fi-cwsuxm-plus-solid watchlist"></i>
+                        <button class="watchlist-btn">Watchlist</button>
                     </div>
+                    <p class="movie-description max-lines">
+                        A blade runner must pursue and terminate four replicants
+                        who stole a ship in space, and have returned to Earth to
+                        find their creator.
+                    </p>
+                </div>
+                <div class="movie">
+                    <img
+                        class="movie-cover"
+                        src="images/bladeRunner.png"
+                        alt=""
+                    />
+                    <h2 class="movie-title">Blade Runner</h2>
+                    <div class="rating">
+                        <i class="fi-xxxxxm-star-solid star"></i>
+                        <p class="movie-rating">8.1</p>
+                    </div>
+                    <p class="movie-runtime">117 min</p>
+                    <p class="movie-genres">Action, Drama, Sci-fi</p>
+                    <div class="add-to-watchlist-btn">
+                        <i class="fi-cwsuxm-plus-solid watchlist"></i>
+                        <button class="watchlist-btn">Watchlist</button>
+                    </div>
+                    <p class="movie-description max-lines">
+                        A blade runner must pursue and terminate four replicants
+                        who stole a ship in space, and have returned to Earth to
+                        find their creator.
+                    </p>
+                </div>
+                <div class="movie">
+                    <img
+                        class="movie-cover"
+                        src="images/bladeRunner.png"
+                        alt=""
+                    />
+                    <h2 class="movie-title">Blade Runner</h2>
+                    <div class="rating">
+                        <i class="fi-xxxxxm-star-solid star"></i>
+                        <p class="movie-rating">8.1</p>
+                    </div>
+                    <p class="movie-runtime">117 min</p>
+                    <p class="movie-genres">Action, Drama, Sci-fi</p>
+                    <div class="add-to-watchlist-btn">
+                        <i class="fi-cwsuxm-plus-solid watchlist"></i>
+                        <button class="watchlist-btn">Watchlist</button>
+                    </div>
+                    <p class="movie-description max-lines">
+                        A blade runner must pursue and terminate four replicants
+                        who stole a ship in space, and have returned to Earth to
+                        find their creator.
+                    </p>
+                </div>
+                <div class="movie">
+                    <img
+                        class="movie-cover"
+                        src="images/bladeRunner.png"
+                        alt=""
+                    />
+                    <h2 class="movie-title">Blade Runner</h2>
+                    <div class="rating">
+                        <i class="fi-xxxxxm-star-solid star"></i>
+                        <p class="movie-rating">8.1</p>
+                    </div>
+                    <p class="movie-runtime">117 min</p>
+                    <p class="movie-genres">Action, Drama, Sci-fi</p>
+                    <div class="add-to-watchlist-btn">
+                        <i class="fi-cwsuxm-plus-solid watchlist"></i>
+                        <button class="watchlist-btn">Watchlist</button>
+                    </div>
+                    <p class="movie-description max-lines">
+                        A blade runner must pursue and terminate four replicants
+                        who stole a ship in space, and have returned to Earth to
+                        find their creator.
+                    </p>
+                </div>
+                <div class="movie">
+                    <img
+                        class="movie-cover"
+                        src="images/bladeRunner.png"
+                        alt=""
+                    />
+                    <h2 class="movie-title">Blade Runner</h2>
+                    <div class="rating">
+                        <i class="fi-xxxxxm-star-solid star"></i>
+                        <p class="movie-rating">8.1</p>
+                    </div>
+                    <p class="movie-runtime">117 min</p>
+                    <p class="movie-genres">Action, Drama, Sci-fi</p>
+                    <div class="add-to-watchlist-btn">
+                        <i class="fi-cwsuxm-plus-solid watchlist"></i>
+                        <button class="watchlist-btn">Watchlist</button>
+                    </div>
+                    <p class="movie-description max-lines">
+                        A blade runner must pursue and terminate four replicants
+                        who stole a ship in space, and have returned to Earth to
+                        find their creator.
+                    </p>
+                </div>
+                <div class="movie">
+                    <img
+                        class="movie-cover"
+                        src="images/bladeRunner.png"
+                        alt=""
+                    />
+                    <h2 class="movie-title">Blade Runner</h2>
+                    <div class="rating">
+                        <i class="fi-xxxxxm-star-solid star"></i>
+                        <p class="movie-rating">8.1</p>
+                    </div>
+                    <p class="movie-runtime">117 min</p>
+                    <p class="movie-genres">Action, Drama, Sci-fi</p>
+                    <div class="add-to-watchlist-btn">
+                        <i class="fi-cwsuxm-plus-solid watchlist"></i>
+                        <button class="watchlist-btn">Watchlist</button>
+                    </div>
+                    <p class="movie-description max-lines">
+                        A blade runner must pursue and terminate four replicants
+                        who stole a ship in space, and have returned to Earth to
+                        find their creator.
+                    </p>
+                </div>
+                <div class="movie">
+                    <img
+                        class="movie-cover"
+                        src="https://m.media-amazon.com/images/M/MV5BMTczMzIxNzUwNV5BMl5BanBnXkFtZTcwNDg0NjEyMQ@@._V1_SX300.jpg"
+                        alt=""
+                    />
+                    <h2 class="movie-title">Testing the Limits</h2>
+                    <div class="rating">
+                        <i class="fi-xxxxxm-star-solid star"></i>
+                        <p class="movie-rating">change me</p>
+                    </div>
+                    <p class="movie-runtime">117 min</p>
+                    <p class="movie-genres">change this</p>
+                    <div class="add-to-watchlist-btn">
+                        <i class="fi-cwsuxm-plus-solid watchlist"></i>
+                        <button class="watchlist-btn">Watchlist</button>
+                    </div>
+                    <p class="movie-description max-lines">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Perferendis vero explicabo vitae obcaecati, sunt
+                        nemo doloremque officia numquam tempore ratione rem
+                        laudantium quae est esse ab. Vitae unde modi aspernatur!
+                    </p>
+                </div>
+                <div class="movie">
+                    <img
+                        class="movie-cover"
+                        src="images/bladeRunner.png"
+                        alt=""
+                    />
+                    <h2 class="movie-title">Blade Runner</h2>
+                    <div class="rating">
+                        <i class="fi-xxxxxm-star-solid star"></i>
+                        <p class="movie-rating">8.1</p>
+                    </div>
+                    <p class="movie-runtime">117 min</p>
+                    <p class="movie-genres">Action, Drama, Sci-fi</p>
+                    <div class="add-to-watchlist-btn">
+                        <i class="fi-cwsuxm-plus-solid watchlist"></i>
+                        <button class="watchlist-btn">Watchlist</button>
+                    </div>
+                    <p class="movie-description max-lines">
+                        A blade runner must pursue and terminate four replicants
+                        who stole a ship in space, and have returned to Earth to
+                        find their creator.
+                    </p>
                 </div>
 
                 <!-- ICON FOR THE STAR RATING -->
