@@ -1,4 +1,3 @@
-/* margin resets */
 * {
     margin: 0;
     padding: 0;
@@ -77,9 +76,24 @@ body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     margin: 2em 0;
+}
+
+.empty {
+    justify-content: center;
+    align-items: center;
+
+}
+
+.empty h2 {
+    margin-bottom: 2em;
+    color:#DFDDDD;
+}
+
+.empty h3 a {
+    color: #363636;
 }
 
 .search-results > h3 {
@@ -133,15 +147,33 @@ a {
     grid-area: runt;
 }
 
-.add-to-watchlist-btn {
+.add-to-watchlist-btn,
+.remove-from-watchlist-btn {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     grid-area: watc;
     padding: 0;
 }
 
-.add-to-watchlist-btn button {
+.watchlist-btn {
+    display: flex;
+    justify-content: center;
+}
+.watchlist-btn i {
+    display: block;
+    margin-right: .5em;
+    margin-bottom: .125em;
+}
+
+
+
+.fi-cwsuxm-minus-solid {
+    color: red;
+}
+
+.add-to-watchlist-btn button,
+.remove-from-watchlist-btn button {
     border: none;
     background-color: transparent;
     margin-top: 3px;
@@ -152,6 +184,7 @@ a {
     grid-area: desc;
     white-space: no-wrap;
 }
+
 
 @media (min-width: 768px) {
  
@@ -179,7 +212,7 @@ a {
         
         gap: 1em;
         display: grid;
-        align-items: center;
+        align-items: start;
         grid-template-columns: 6em repeat(7, auto) ;
         grid-template-areas: 
             
@@ -195,10 +228,7 @@ a {
         margin: 3em;
     }
 
-    .watchlist {
-        padding-right: .5em;
-        margin-bottom: .1em;
-    }
+
     .rating i {
         padding-right: .25em;
     }
